@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "id": "omp_studio_moui",
+  "title": "OmpStudioMoui",
+  "module": "local/omp_studio_moui",
+  "mouiVersion": "0.4.0",
+  "platforms": [
+    "web",
+    "macos"
+  ]
+}

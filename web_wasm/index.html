@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+    <meta
+      name="description"
+      content="OMP Studio 的 MoonBit + MoUI 复刻：多浮窗工作台、会话侧栏、命令面板与 10 个二级页面，整块界面由 canvas 自绘。"
+    />
+    <title>OMP Studio · MoonBit/MoUI 复刻</title>
+    <style>
+      * { box-sizing: border-box; }
+      html, body, #canvas-host { width: 100%; height: 100%; margin: 0; }
+      body { overflow: hidden; background: #f6f7f9; }
+      canvas { display: block; width: 100%; height: 100%; outline: none; touch-action: none; }
+      #boot-status {
+        position: fixed;
+        inset: auto 0 16px 0;
+        text-align: center;
+        font: 12px/1.5 system-ui, sans-serif;
+        color: #6b7280;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="canvas-host" aria-label="MoUI canvas host"></div>
+    <div id="boot-status" role="status">正在加载 MoonBit 运行时…</div>
+    <script type="module">
+      import { bootMouiWasmGcApp } from "../.mooncakes/wzzc-dev/moui_web_renderer/runtime.js";
+      const status = document.querySelector("#boot-status");
+      bootMouiWasmGcApp({
+        wasmUrl: new URL("../_build/wasm-gc/debug/build/web_wasm/web_wasm.wasm", import.meta.url),
+        canvasHost: "#canvas-host",
+        onStatus: text => {
+          if (status) status.textContent = text;
+        },
+      })
+        .then(() => status?.remove())
+        .catch(error => {
+          console.error(error);
+          if (status) status.textContent = "启动失败：" + (error?.message ?? error);
+        });
+    </script>
+  </body>
+</html>

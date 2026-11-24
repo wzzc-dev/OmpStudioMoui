@@ -1,0 +1,18 @@
+import {
+  "moonbitlang/core/env",
+  "moonbitlang/core/string",
+  "wzzc-dev/moui/runtime",
+  "wzzc-dev/moui/apphost",
+  "wzzc-dev/moui/backend/macos" @platform_host,
+  "wzzc-dev/moui_skia_renderer" @render_skia,
+  "local/omp_studio_moui/app" @app,
+}
+
+supported_targets = "native"
+
+pkgtype(kind: "executable")
+
+options(
+  link: { "native": { "cc-link-flags": "" } },
+  targets: { "main.mbt": [ "native" ] },
+)

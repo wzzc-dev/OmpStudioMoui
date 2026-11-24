@@ -1,0 +1,1404 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "local/omp_studio_moui/app"
+
+import {
+  "moonbitlang/core/ref",
+  "wzzc-dev/moui/core",
+  "wzzc-dev/moui/views/common",
+}
+
+// Values
+pub const CANVAS_PAD : Double = 12.0
+
+pub const CONVO_MIN_W : Double = 560.0
+
+pub const DOCK_MARGIN : Double = 12.0
+
+pub const DOCK_PANELS : Int32 = 5
+
+pub const DOCK_W : Double = 40.0
+
+pub const MODAL_CONFIRM_H : Double = 144.0
+
+pub const MODAL_RENAME_H : Double = 162.0
+
+pub const MODAL_SHORTCUTS_H : Double = 260.0
+
+pub const MODAL_W : Double = 480.0
+
+pub const PAGE_INTRO_H : Double = 62.0
+
+pub const PAGE_TABS_H : Double = 32.0
+
+pub const PALETTE_GROUP_GAP : Double = 6.0
+
+pub const PALETTE_GROUP_H : Double = 24.0
+
+pub const PALETTE_INPUT_H : Double = 53.0
+
+pub const PALETTE_ITEM_H : Double = 34.0
+
+pub const PALETTE_LIST_PAD : Double = 8.0
+
+pub const PALETTE_MAX : Double = 680.0
+
+pub const PALETTE_RADIUS : Double = 28.0
+
+pub const RAIL_W : Double = 56.0
+
+pub const SHEET_IN_MS : Double = 180.0
+
+pub const SHEET_OUT_MS : Double = 120.0
+
+pub const SIDEBAR_MAX : Double = 400.0
+
+pub const SIDEBAR_MIN : Double = 200.0
+
+pub const SIDEBAR_W : Double = 272.0
+
+pub const SPLIT_MAX : Double = 0.85
+
+pub const SPLIT_MIN : Double = 0.15
+
+pub const TABS_H : Double = 44.0
+
+pub const TAB_BADGE_RESERVE : Double = 68.0
+
+pub const TAB_CLUSTER_GAP : Double = 8.0
+
+pub const TAB_CLUSTER_W : Double = 640.0
+
+pub const TACTILE_MS : Double = 80.0
+
+pub const TIP_DELAY_MS : Double = 500.0
+
+pub const TIP_FADE_MS : Double = 120.0
+
+pub const TITLEBAR_H : Double = 36.0
+
+pub const TITLEBAR_LEAD : Double = 78.0
+
+pub const TOAST_HOLD_MS : Double = 2800.0
+
+pub const TOAST_IN_MS : Double = 320.0
+
+pub const TOAST_OUT_MS : Double = 250.0
+
+pub const WIN_TITLEBAR_H : Double = 34.0
+
+pub const WIN_TITLE_MIN_W : Double = 110.0
+
+pub fn activate_ctl(Model, Shell, Ctl) -> Model
+
+pub fn all_routes() -> Array[Route]
+
+pub fn app_theme(Bool) -> @core.Theme
+
+pub fn apply_preset(Model, LayoutPreset) -> Model
+
+pub fn avatar(@common.PaintContext, Double, Double, Double, @core.Color, String, @core.TextSystem, Palette) -> Unit
+
+pub fn badge_dot(@common.PaintContext, @core.TextSystem, RectD, String, @core.Color) -> Unit
+
+pub fn brand_mark(@common.PaintContext, RectD, @core.Color, @core.Color) -> Unit
+
+pub fn browser_box(RectD) -> BrowserBox
+
+pub fn[Msg] canvas(Model, measure~ : (@core.Constraints, @core.TextSystem) -> @core.Size, draw~ : (@common.PaintContext, @core.Rect, Double, @core.TextSystem) -> Unit) -> @core.View[Msg]
+
+pub fn capabilities_counts(Model) -> Array[Int32]
+
+pub fn caps_row_action(RectD) -> RectD
+
+pub fn caps_row_slots(Model, PageShell) -> Array[RectD]
+
+pub fn caps_rows(Model) -> Array[Int32]
+
+pub fn caps_run(Model, Int32) -> Model
+
+pub fn caps_tab_kind(Int32) -> Int32
+
+pub fn caps_tab_labels() -> Array[String]
+
+pub fn caps_tabs_rect(PageShell, Double) -> RectD
+
+pub fn capsule_rects(Model, Shell) -> Array[Capsule]
+
+pub fn chevron_down(@common.PaintContext, Double, Double, @core.Color, Double) -> Unit
+
+pub fn chip(@common.PaintContext, @core.TextSystem, RectD, String, @core.Color, @core.Color, @core.Color, Double) -> Unit
+
+pub fn clamp_f(Double, Double, Double) -> Double
+
+pub fn clamp_sidebar(Double, Double) -> Double
+
+pub fn clip_rect(@common.PaintContext, @core.Rect) -> Unit
+
+pub fn clip_round(@common.PaintContext, @core.Rect, Double) -> Unit
+
+pub fn close_window(Model, Int32) -> Model
+
+pub fn composer_pills(RectD) -> ComposerPills
+
+pub fn controls(Model, Shell) -> Array[CtlRec]
+
+pub fn convo_box(RectD) -> ConvoBox
+
+pub fn convo_latest_pill(ConvoBox) -> RectD
+
+pub fn ctl_hit(Array[CtlRec], Double, Double) -> Ctl
+
+pub fn ctl_rect(Array[CtlRec], Ctl) -> RectD?
+
+pub fn ctl_tip(Array[CtlRec], Ctl) -> String
+
+pub fn dashed(@common.PaintContext, Double, Double, Double, @core.Color) -> Unit
+
+pub fn demo_agents() -> Array[AgentRow]
+
+pub fn demo_checks() -> Array[CheckRow]
+
+pub fn demo_eval_runs() -> Array[EvalRun]
+
+pub fn demo_history_rows() -> Array[HistoryRow]
+
+pub fn demo_media() -> Array[MediaItem]
+
+pub fn demo_project_cards() -> Array[ProjectCard]
+
+pub fn demo_providers() -> Array[ProviderRow]
+
+pub fn demo_role_routes() -> Array[RoleRoute]
+
+pub fn demo_shortcuts() -> Array[ShortcutRow]
+
+pub fn demo_skills() -> Array[SkillRow]
+
+pub fn demo_usage_days() -> Array[UsageDay]
+
+pub fn demo_usage_models() -> Array[UsageModelRow]
+
+pub fn density_scale(Int32) -> Double
+
+pub fn diag_action(Model, Int32) -> Model
+
+pub fn diag_actions(PageShell, Double) -> Array[RectD]
+
+pub fn diag_check_slots(Model, PageShell) -> Array[RectD]
+
+pub fn diag_env_slots(Model, PageShell) -> Array[RectD]
+
+pub fn dock_slots(Shell) -> Array[RectD]
+
+pub fn dot(@common.PaintContext, Double, Double, Double, @core.Color) -> Unit
+
+pub fn ease_in(Double) -> Double
+
+pub fn ease_out(Double) -> Double
+
+pub fn ellipsize(@core.TextSystem, String, @core.FontSpec, Double) -> String
+
+pub fn eval_filter_labels() -> Array[String]
+
+pub fn eval_filter_rect(PageShell, Double) -> RectD
+
+pub fn eval_metric_slots(PageShell, Double) -> Array[RectD]
+
+pub fn eval_row_slots(Model, PageShell) -> Array[RectD]
+
+pub fn eval_rows(Model) -> Array[Int32]
+
+pub fn eval_status_label(Int32) -> String
+
+pub fn fallback_row_slots(Model, PageShell) -> Array[RectD]
+
+pub fn fill(@common.PaintContext, @core.Rect, @core.Color) -> Unit
+
+pub fn first_char(String) -> String
+
+pub fn fmt_tokens(Int32) -> String
+
+pub fn focus_activate(Model) -> Model
+
+pub fn focus_clear(Model) -> Model
+
+pub fn focus_list(Model, Shell) -> Array[CtlRec]
+
+pub fn focus_step(Model, Int32) -> Model
+
+pub fn font_mono(Double) -> @core.FontSpec
+
+pub fn font_ui(Double, Int32) -> @core.FontSpec
+
+pub fn frame_hit(RectD, Double, Double) -> Int32
+
+pub fn frame_size(Model) -> (Double, Double)
+
+pub fn go_route(Model, Route) -> Model
+
+pub fn hair(@common.PaintContext, Double, Double, Double, Double, @core.Color) -> Unit
+
+pub fn hairline(@core.Color, Double) -> @core.BorderStyle
+
+pub fn history_filtered_ids(Model) -> Array[Int32]
+
+pub fn history_row_slots(Model, PageShell) -> Array[RectD]
+
+pub fn history_rows_len(Model) -> Int32
+
+pub fn history_side_card(PageShell, Double) -> RectD
+
+pub fn history_state_label(Int32) -> String
+
+pub fn history_toolbar_slots(Model, PageShell) -> (RectD, RectD)
+
+pub fn home_activity_card(PageShell, Double) -> RectD
+
+pub fn home_activity_slots(Model, PageShell) -> Array[RectD]
+
+pub fn home_project_slots(Model, PageShell) -> Array[RectD]
+
+pub fn home_quick_slots(Model, PageShell) -> Array[RectD]
+
+pub fn home_token_card(PageShell, Double) -> RectD
+
+pub fn hover_tip(Model, Array[CtlRec], Double, Double) -> Model
+
+pub fn hovering(Model, RectD) -> Bool
+
+pub fn hub_detail_action_slots(Model, PageShell) -> Array[RectD]
+
+pub fn hub_detail_rect(Model, PageShell) -> RectD
+
+pub fn hub_metric_slots(PageShell, Double) -> Array[RectD]
+
+pub fn hub_row_slots(Model, PageShell) -> Array[RectD]
+
+pub fn hub_spawn_rect(PageShell, Double) -> RectD
+
+pub fn hub_toggle_rect(RectD) -> RectD
+
+pub fn icon(@common.PaintContext, String, @core.Rect, Double, @core.Color, Double) -> Unit
+
+pub fn icon_at(@common.PaintContext, String, Double, Double, Double, @core.Color, Double) -> Unit
+
+pub fn icon_button(@common.PaintContext, RectD, String, @core.Color, Double) -> Unit
+
+pub fn icon_c(@common.PaintContext, String, Double, Double, Double, @core.Color, Double) -> Unit
+
+pub fn icon_w(@common.PaintContext, String, Double, Double, Double, @core.Color, Double) -> Unit
+
+pub fn inset_rect(@core.Rect, Double) -> @core.Rect
+
+pub fn kind_label(Int32) -> String
+
+pub fn line(@common.PaintContext, Double, Double, Double, Double, @core.Color, Double) -> Unit
+
+pub fn media_action_slots(PageShell, Double) -> Array[RectD]
+
+pub fn media_cell_slots(Model, PageShell) -> Array[RectD]
+
+pub fn media_detail_action_slots(Model, PageShell) -> Array[RectD]
+
+pub fn media_detail_rect(Model, PageShell) -> RectD
+
+pub fn media_filter_labels() -> Array[String]
+
+pub fn media_filter_rect(PageShell, Double) -> RectD
+
+pub fn media_items_filtered(Model) -> Array[Int32]
+
+pub fn media_kind_label(Int32) -> String
+
+pub fn minimize_window(Model, Int32) -> Model
+
+pub fn modal_box(Model, Double, Double) -> RectD
+
+pub fn modal_buttons(Model, RectD) -> ModalBtns
+
+pub fn modal_close_now(Model) -> Model
+
+pub fn modal_confirm(Model) -> Model
+
+pub fn modal_fade(Model) -> Double
+
+pub fn modal_focus_step(Model, Int32) -> Model
+
+pub fn modal_has_cancel(Model) -> Bool
+
+pub fn modal_height(ModalKind) -> Double
+
+pub fn modal_input_rect(RectD) -> RectD
+
+pub fn modal_kind(Model) -> ModalKind
+
+pub fn modal_motion(Model) -> (Double, Double)
+
+pub fn modal_open_now(Model, ModalKind) -> Model
+
+pub fn modal_pointer(Model, PointerMsg) -> Model
+
+pub fn model_row_slots(Model, PageShell) -> Array[RectD]
+
+pub fn model_rows(Model) -> Array[(Int32, Int32)]
+
+pub fn model_tab_labels() -> Array[String]
+
+pub fn model_tabs_rect(PageShell, Double) -> RectD
+
+pub fn mono_font(Double) -> @core.FontSpec
+
+pub fn nav_pill_width(Route) -> Double
+
+pub fn needs_frames(Model) -> Bool
+
+pub fn needs_frames_at(Model, Double) -> Bool
+
+pub fn new_conversation_window(Model, Int32, String) -> Model
+
+pub fn new_thread(Model) -> Model
+
+pub fn next_cycle(Int32, Int32) -> Int32
+
+pub fn norm_rect(RectD, RectD) -> RectD
+
+pub fn open_history_row(Model, Int32) -> Model
+
+pub fn outline_button(@common.PaintContext, @core.TextSystem, RectD, String, @core.Color, @core.Color, @core.Color) -> Unit
+
+pub fn page_back_btn(PageShell) -> RectD
+
+pub fn page_bar_chart(@common.PaintContext, @core.TextSystem, RectD, Array[UsageDay], Palette) -> Unit
+
+pub fn page_body_top(PageShell, Double) -> Double
+
+pub fn page_btn(@common.PaintContext, @core.TextSystem, RectD, String, Bool, Palette, hovered? : Bool) -> Unit
+
+pub fn page_card(@common.PaintContext, RectD, Palette) -> Unit
+
+pub fn page_content_height(Model, PageShell) -> Double
+
+pub fn page_hr(@common.PaintContext, Double, Double, Double, Palette) -> Unit
+
+pub fn page_input(@common.PaintContext, @core.TextSystem, RectD, String, String, Bool, Palette) -> Unit
+
+pub fn page_intro(@common.PaintContext, @core.TextSystem, RectD, String, String, Palette) -> Unit
+
+pub fn page_limits(Model, PageShell) -> (Double, Double)
+
+pub fn page_max_scroll(Model, PageShell) -> Double
+
+pub fn page_muted(@common.PaintContext, @core.TextSystem, String, Double, Double, Double, Palette) -> Unit
+
+pub fn page_nav_route_at(PageShell, Double, Double) -> Int32
+
+pub fn page_nav_routes() -> Array[Route]
+
+pub fn page_nav_slots(PageShell) -> Array[RectD]
+
+pub fn page_nav_start(PageShell) -> Double
+
+pub fn page_note_pill(@common.PaintContext, @core.TextSystem, PageShell, String, Palette) -> Unit
+
+pub fn page_pointer(Model, PointerMsg) -> Model
+
+pub fn page_scroll_by(Model, Double, PageShell) -> Model
+
+pub fn page_section(@common.PaintContext, @core.TextSystem, Double, Double, Double, String, Palette) -> Unit
+
+pub fn page_segmented(@common.PaintContext, @core.TextSystem, RectD, Array[String], Int32, Palette) -> Unit
+
+pub fn page_shell(Double, Double) -> PageShell
+
+pub fn page_tag(@common.PaintContext, @core.TextSystem, RectD, String, @core.Color, Palette) -> Unit
+
+pub fn page_theme_btn(PageShell) -> RectD
+
+pub fn page_title_rect(PageShell) -> RectD
+
+pub fn page_toggle(@common.PaintContext, RectD, Bool, Palette) -> Unit
+
+pub let paint_frame_h : @ref.Ref[Double]
+
+pub let paint_frame_w : @ref.Ref[Double]
+
+pub fn paint_interaction(@common.PaintContext, @core.TextSystem, Model, Shell, Palette, Double, Double) -> Unit
+
+pub let paint_now : @ref.Ref[Double]
+
+pub fn paint_overlays(@common.PaintContext, @core.TextSystem, Model, Shell, Palette) -> Unit
+
+pub fn paint_page(@common.PaintContext, @core.TextSystem, Model, Double, Double, Palette) -> Unit
+
+pub fn paint_palette(@common.PaintContext, @core.TextSystem, Model, Shell, Palette) -> Unit
+
+pub fn paint_scene(@common.PaintContext, @core.TextSystem, Model, @core.Rect, Double) -> Unit
+
+pub fn paint_sidebar(@common.PaintContext, @core.TextSystem, Model, Shell, Palette) -> Unit
+
+pub fn paint_windows(@common.PaintContext, @core.TextSystem, Model, Shell, Palette) -> Unit
+
+pub fn palette_catalog(Model) -> Array[CmdGroup]
+
+pub fn palette_content_h(Array[PaletteLine]) -> Double
+
+pub fn palette_groups(Model) -> Array[CmdGroup]
+
+pub fn palette_items(Model) -> Array[CmdItem]
+
+pub fn palette_line_height(PaletteLine) -> Double
+
+pub fn palette_lines(Model) -> Array[PaletteLine]
+
+pub fn palette_list_rect(RectD) -> RectD
+
+pub fn palette_panel_rect(Double, Double) -> RectD
+
+pub fn palette_recents(Model) -> Array[CmdItem]
+
+pub fn palette_reveal(Model) -> Model
+
+pub fn palette_row_at(Model, Double, Double) -> Int32
+
+pub fn palette_run(Model, Int32) -> Model
+
+pub fn palette_scroll_max(Model) -> Double
+
+pub fn palette_shortcut_row(Model, String) -> Int32
+
+pub fn panel(@common.PaintContext, RectD, Double, @core.Color, @core.Color) -> Unit
+
+pub fn picker_cells(Shell) -> Array[RectD]
+
+pub fn picker_panel(Shell) -> RectD
+
+pub fn plan_box(RectD) -> PlanBox
+
+pub fn plus_tab(Model, Shell) -> RectD
+
+pub fn pop_composer(Model) -> Model
+
+pub fn press_alpha(Model) -> Double
+
+pub fn press_begin(Model, Array[CtlRec], Double, Double) -> Model
+
+pub fn press_prune(Model, Shell) -> Model
+
+pub fn press_release(Model) -> Model
+
+pub fn primary_button(@common.PaintContext, @core.TextSystem, RectD, String, @core.Color, @core.Color) -> Unit
+
+pub fn program() -> @core.Program[Model, Msg]
+
+pub fn program_at(Route) -> @core.Program[Model, Msg]
+
+pub fn program_qa(Route, Bool, Double, Double) -> @core.Program[Model, Msg]
+
+pub fn program_qa_query(Route, Bool, String, Double, Double) -> @core.Program[Model, Msg]
+
+pub fn program_qa_state(Route, Bool, String, String, Bool, String, Bool, Double, Double) -> @core.Program[Model, Msg]
+
+pub fn provider_row_slots(Model, PageShell) -> Array[RectD]
+
+pub fn provider_test_rect(RectD) -> RectD
+
+pub fn provider_toggle_rect(RectD) -> RectD
+
+pub fn push_composer(Model, String) -> Model
+
+pub fn put(@common.PaintContext, @core.Rect, String, @core.FontSpec, @core.Color) -> Unit
+
+pub fn put_at(@common.PaintContext, @core.TextSystem, String, @core.FontSpec, @core.Color, Double, Double, Double, Double) -> Unit
+
+pub fn put_at_r(@common.PaintContext, String, @core.FontSpec, @core.Color, Double, Double, Double, Double) -> Unit
+
+pub fn put_c(@common.PaintContext, @core.Rect, String, @core.FontSpec, @core.Color) -> Unit
+
+pub fn put_r(@common.PaintContext, @core.Rect, String, @core.FontSpec, @core.Color) -> Unit
+
+pub fn put_wrapped(@common.PaintContext, @core.TextSystem, String, @core.FontSpec, @core.Color, Double, Double, Double, Double, Int32) -> Double
+
+pub fn rail_avatar(Shell) -> RectD
+
+pub fn rail_handle(Shell) -> RectD
+
+pub fn rail_route_index(Route) -> Int32
+
+pub fn rail_routes() -> Array[Route]
+
+pub fn rail_slots(Shell) -> Array[RectD]
+
+pub fn rail_update(Shell) -> RectD
+
+pub fn raise_window(Model, Int32) -> Model
+
+pub fn rect(Double, Double, Double, Double) -> @core.Rect
+
+pub fn rect_of(RectD) -> @core.Rect
+
+pub fn refresh_models(Model, Int32) -> Model
+
+pub fn restore_window(Model, Int32) -> Model
+
+pub fn rgba8(Int32, Int32, Int32, Double) -> @core.Color
+
+pub fn ring_arc(@common.PaintContext, Double, Double, Double, @core.Color, Double, Double, Double) -> Unit
+
+pub fn role_row_slots(Model, PageShell) -> Array[RectD]
+
+pub fn round_fill(@common.PaintContext, @core.Rect, Double, @core.Color) -> Unit
+
+pub fn round_stroke(@common.PaintContext, @core.Rect, Double, @core.Color, Double) -> Unit
+
+pub fn route_by_slug(String) -> Route
+
+pub fn route_slug(Route) -> String
+
+pub fn scroll_thumb(@common.PaintContext, RectD, @core.Color) -> Unit
+
+pub fn section_head(@common.PaintContext, @core.TextSystem, Double, Double, Double, String, Palette) -> Unit
+
+pub fn select_model_note(Model, Int32) -> Model
+
+pub fn select_thread(Model, Int32) -> Model
+
+pub fn send_composer(Model) -> Model
+
+pub fn set_note(Model, String) -> Model
+
+pub fn set_window_rect(Model, Int32, RectD) -> Model
+
+pub fn settings_control_rect(RectD) -> RectD
+
+pub fn settings_row_slots(Model, PageShell) -> Array[RectD]
+
+pub fn settings_rows(Int32) -> Array[(String, String, Int32, Int32)]
+
+pub fn settings_tab_labels() -> Array[String]
+
+pub fn settings_tab_slots(PageShell, Double) -> Array[RectD]
+
+pub fn shadow(@common.PaintContext, @core.Rect, Double, @core.Color, Double, Double) -> Unit
+
+pub fn shell_layout(Double, Double, Bool, sidebar_w? : Double) -> Shell
+
+pub fn shift(@core.Rect, Double, Double) -> @core.Rect
+
+pub fn sidebar_ceiling(Double) -> Double
+
+pub fn sidebar_divider_y(Model, Shell) -> Double
+
+pub fn sidebar_region_h(Model, Shell) -> Double
+
+pub fn sidebar_resizer(Shell) -> RectD
+
+pub fn sidebar_slots(Model, Shell) -> Array[SbSlot]
+
+pub fn sidebar_split_handle(Model, Shell) -> RectD
+
+pub fn solid(Int32, Int32, Int32) -> @core.Color
+
+pub fn spinner(@common.PaintContext, Double, Double, Double, @core.Color, Double) -> Unit
+
+pub fn stats_chart_rect(PageShell, Double) -> RectD
+
+pub fn stats_days(Model) -> Array[UsageDay]
+
+pub fn stats_metric_slots(PageShell, Double) -> Array[RectD]
+
+pub fn stats_model_slots(Model, PageShell) -> Array[RectD]
+
+pub fn stats_range_labels() -> Array[String]
+
+pub fn stats_range_rect(PageShell, Double) -> RectD
+
+pub fn status_dot(@common.PaintContext, Double, Double, @core.Color) -> Unit
+
+pub fn tab_close_rect(TabSlot) -> RectD
+
+pub fn tab_cluster(Shell) -> TabCluster
+
+pub fn tab_cluster_reserve(Shell) -> Double
+
+pub fn tab_cluster_tier(Shell) -> Int32
+
+pub fn tab_slots(Model, Shell) -> Array[TabSlot]
+
+pub fn test_provider(Model, Int32) -> Model
+
+pub fn text_height(@core.TextSystem, String, @core.FontSpec) -> Double
+
+pub fn text_width(@core.TextSystem, String, @core.FontSpec) -> Double
+
+pub fn tip_alpha(Model) -> Double
+
+pub fn tip_clear(Model) -> Model
+
+pub fn titlebar_nav_slots(Shell) -> Array[RectD]
+
+pub fn tline(@common.PaintContext, @core.TextSystem, String, @core.FontSpec, @core.Color, Double, Double, Double) -> Unit
+
+pub fn tline_c(@common.PaintContext, @core.TextSystem, String, @core.FontSpec, @core.Color, Double, Double, Double) -> Unit
+
+pub fn tline_r(@common.PaintContext, @core.TextSystem, String, @core.FontSpec, @core.Color, Double, Double, Double) -> Unit
+
+pub fn tline_w(@common.PaintContext, @core.TextSystem, String, @core.FontSpec, @core.Color, Double, Double, Double) -> Double
+
+pub fn toast_alpha(Model) -> Double
+
+pub fn toast_lift(Model) -> Double
+
+pub fn toast_live(Model) -> Bool
+
+pub fn toast_live_at(Model, Double) -> Bool
+
+pub fn toast_show(Model, String) -> Model
+
+pub fn toggle_maximize(Model, Int32) -> Model
+
+pub fn toggle_minimize(Model, Int32) -> Model
+
+pub fn trim(@core.Rect, Double, Double, Double, Double) -> @core.Rect
+
+pub fn ui_font(Double, Int32) -> @core.FontSpec
+
+pub fn unclip(@common.PaintContext) -> Unit
+
+pub fn unclip_rect(@common.PaintContext) -> Unit
+
+pub fn update(Model, Msg) -> Model
+
+pub fn view(Model) -> @core.View[Msg]
+
+pub fn visible_windows(Model) -> Array[WindowRec]
+
+pub fn win_chrome(RectD, source_w? : Double) -> WinChrome
+
+pub fn win_px(WindowRec, Shell) -> RectD
+
+pub fn window_by_id(Model, Int32) -> WindowRec?
+
+pub fn window_index(Model, Int32) -> Int32
+
+pub fn with_hover(Model, Double, Double) -> Model
+
+pub fn wrap_lines(@common.PaintContext, @core.TextSystem, String, @core.FontSpec, @core.Color, RectD, Double, Int32) -> Unit
+
+pub fn wrap_text(@core.TextSystem, String, @core.FontSpec, Double) -> Array[String]
+
+// Errors
+
+// Types and methods
+pub(all) struct AgentRow {
+  name : String
+  model : String
+  desc : String
+  on : Bool
+  scope : String
+}
+
+pub(all) struct ApprovalBody {
+  title : String
+  goal : String
+  steps : Array[String]
+  actions : Array[String]
+}
+
+pub(all) struct BrowserBox {
+  frame : RectD
+  body : RectD
+  toolbar : RectD
+  back : RectD
+  forward : RectD
+  reload : RectD
+  omnibox : RectD
+  seg_agent : RectD
+  seg_me : RectD
+  status : RectD
+  page : RectD
+}
+
+pub struct Capsule {
+  id : Int32
+  rect : RectD
+}
+
+pub(all) enum ChatItem {
+  Checklist(Array[String])
+  Diff(String, Int32, Array[String])
+  UserSay(String, String, String)
+  AssistantSay(String, String, String)
+  Tool(ToolCard)
+  Commit(Bool, String, String, String)
+  Approval(ApprovalBody)
+}
+
+pub(all) struct CheckRow {
+  name : String
+  detail : String
+  ok : Bool
+}
+
+pub(all) struct CmdGroup {
+  id : String
+  label : String
+  items : Array[CmdItem]
+}
+
+pub(all) struct CmdItem {
+  id : String
+  label : String
+  meta : String
+  keys : String
+  icon : String
+  keywords : String
+  action : PaletteAction
+}
+
+pub struct ComposerPills {
+  input : RectD
+  chips : RectD
+  perm : RectD
+  mode : RectD
+  model : RectD
+  think : RectD
+  attach : RectD
+  mic : RectD
+}
+
+pub(all) struct ConvoBox {
+  frame : RectD
+  body : RectD
+  scroll : RectD
+  doc_x : Double
+  doc_w : Double
+  minimap : RectD
+  deck : RectD
+  progress : RectD
+  composer : RectD
+  composer_row : RectD
+  send : RectD
+  approve : RectD
+  approve_session : RectD
+  deny : RectD
+}
+
+#derive(Eq)
+pub(all) enum Ctl {
+  CNone
+  CNav(Int32)
+  CClusterPanel
+  CClusterMoon
+  CClusterSliders
+  CClusterHome
+  CClusterCompact
+  CPlusTab
+  CTab(Int32)
+  CTabClose(Int32)
+  CRail(Int32)
+  CRailHandle
+  CSb(Int32)
+  CSbWidth
+  CSbSplit
+  CDock(Int32)
+  CWinMin(Int32)
+  CWinMax(Int32)
+  CWinClose(Int32)
+  CPageBack
+  CPageTheme
+  CPageNav(Int32)
+}
+
+pub struct CtlRec {
+  ctl : Ctl
+  rect : RectD
+  tip : String
+}
+
+pub struct DragInfo {
+  active : Bool
+  id : Int32
+  mode : Int32
+  edges : Int32
+  origin : RectD
+  sx : Double
+  sy : Double
+  snap : SnapZone
+}
+pub fn DragInfo::idle() -> Self
+
+pub(all) struct EvalRun {
+  name : String
+  status : Int32
+  score : Double
+  when : String
+}
+
+pub(all) struct FileRow {
+  depth : Int32
+  name : String
+  folder : Bool
+  added : Bool
+  modified : Bool
+  expanded : Bool
+}
+
+pub(all) struct HistoryRow {
+  title : String
+  project : String
+  branch : String
+  when : String
+  state : Int32
+  tokens : Int32
+}
+
+#derive(Eq)
+pub(all) enum LayoutPreset {
+  SplitEven
+  SplitTwoOne
+  ThreeColumns
+  LeftStacked
+  RightStacked
+  Quadrants
+}
+pub fn LayoutPreset::slots(Self) -> Array[RectD]
+
+pub(all) struct MediaItem {
+  name : String
+  kind : Int32
+  size : String
+  when : String
+  hue : Double
+}
+
+pub struct ModalBtns {
+  cancel : RectD
+  confirm : RectD
+  has_cancel : Bool
+}
+
+#derive(Eq)
+pub(all) enum ModalKind {
+  MNone
+  MConfirm
+  MRename
+  MShortcuts
+}
+
+pub struct Model {
+  dark : Bool
+  windows : Array[WindowRec]
+  active : Int32
+  next_id : Int32
+  drag : DragInfo
+  snap_preview : SnapZone
+  picker : Int32
+  layout : LayoutPreset
+  sidebar_open : Bool
+  explorer_open : Bool
+  composer : String
+  threads : Array[Thread]
+  projects : Array[Project]
+  files : Array[FileRow]
+  current_thread : Int32
+  chat : Array[ChatItem]
+  task : TaskProgress
+  plan : ApprovalBody
+  browser_tab : Int32
+  browser_nav : Int32
+  browser_query : String
+  approval : Int32
+  plan_approved : Bool
+  composer_focus : Bool
+  browser_control : Int32
+  dock_tab : Int32
+  density : Int32
+  route : Route
+  back_route : Route
+  page_scroll : Double
+  frame_w : Double
+  frame_h : Double
+  language_zh : Bool
+  motion : Int32
+  light : Int32
+  doc_width : Int32
+  settings_tab : Int32
+  caps_tab : Int32
+  model_tab : Int32
+  bg_scope : Int32
+  toggles : Array[Bool]
+  page_note : String
+  history_query : String
+  history_filter : Int32
+  history_focus : Bool
+  providers : Array[ProviderRow]
+  active_provider : Int32
+  active_model : Int32
+  skills : Array[SkillRow]
+  usage_days : Array[UsageDay]
+  eval_runs : Array[EvalRun]
+  usage_models : Array[UsageModelRow]
+  media_items : Array[MediaItem]
+  agents : Array[AgentRow]
+  checks : Array[CheckRow]
+  project_cards : Array[ProjectCard]
+  history_rows : Array[HistoryRow]
+  eval_filter : Int32
+  media_filter : Int32
+  role_routes : Array[RoleRoute]
+  stats_range : Int32
+  media_sel : Int32
+  hub_sel : Int32
+  diag_note : String
+  update_note : String
+  hover_x : Double
+  hover_y : Double
+  hover_on : Bool
+  convo_scroll : Double
+  sidebar_scroll : Double
+  palette_open : Bool
+  palette_query : String
+  palette_index : Int32
+  palette_scroll : Double
+  sidebar_w : Double
+  sidebar_split : Double
+  resize_mode : Int32
+  resize_base : Double
+  resize_anchor : Double
+  press_ctl : Ctl
+  press_rect : RectD
+  press_down : Bool
+  press_at : Double
+  press_up : Double
+  focus_ctl : Ctl
+  focus_rect : RectD
+  focus_kb : Bool
+  tip_ctl : Ctl
+  tip_rect : RectD
+  tip_start : Double
+  tip_text : String
+  toast_text : String
+  toast_start : Double
+  toast_end : Double
+  modal : ModalKind
+  modal_leaving : ModalKind
+  modal_open : Double
+  modal_close : Double
+  modal_input : String
+  modal_focus : Int32
+}
+pub fn Model::new() -> Self
+
+pub(all) enum Msg {
+  ToggleTheme
+  ToggleSidebar
+  ToggleExplorer
+  NewThread
+  SelectThread(Int32)
+  ComposerInput(String)
+  ComposerSend
+  FocusWindow(Int32)
+  CloseWindow(Int32)
+  MinimizeWindow(Int32)
+  ToggleMaximize(Int32)
+  OpenPicker(Int32)
+  ClosePicker
+  ApplyPreset(LayoutPreset)
+  ApprovePlan
+  RefinePlan
+  SelectBrowserTab(Int32)
+  SelectBrowserNav(Int32)
+  SelectBrowserQuery(Int32)
+  Pointer(PointerMsg)
+  KeyTyped(String)
+  KeyDown(String, Int32)
+  CapsuleClick(Int32)
+  DockSelect(Int32)
+  AllowOnce
+  AllowSession
+  DenyApproval
+  DenyPlan
+  BrowserControl(Int32)
+  NewWindow
+  ToggleDensity
+  GoRoute(Route)
+  GoBack
+  PageScroll(Double)
+  CapsTab(Int32)
+  ToggleSkill(Int32)
+  HistoryFilter(Int32)
+  HistoryRow(Int32)
+  SelectProvider(Int32)
+  SelectModel(Int32)
+  SettingsTab(Int32)
+  SetLanguage(Bool)
+  CycleMotion
+  CycleLight
+  CycleDocWidth
+  ToggleAgent(Int32)
+  EvalFilter(Int32)
+  MediaFilter(Int32)
+  ToggleProvider(Int32)
+  StatsRange(Int32)
+  MediaSelect(Int32)
+  HubSelect(Int32)
+  DiagAction(Int32)
+  CheckUpdate
+  ModelTab(Int32)
+  ToggleSwitch(Int32)
+  BgScope(Int32)
+  CapsRun(Int32)
+  TestProvider(Int32)
+  RefreshModels(Int32)
+  CycleRoleModel(Int32)
+  HistoryFocus
+  TogglePalette
+  ClosePalette
+  PaletteType(String)
+  PaletteMove(Int32)
+  PaletteRun(Int32)
+  FocusStep(Int32)
+  FocusArrow(Int32)
+  FocusActivate
+  FocusClear
+  ModalOpen(ModalKind)
+  ModalClose
+  ModalType(String)
+  ModalBackspace
+  ModalConfirm
+  Toast(String)
+}
+
+pub(all) struct PageShell {
+  rail : RectD
+  head : RectD
+  body : RectD
+  content : RectD
+  scroll_track : RectD
+}
+
+pub struct Palette {
+  dark : Bool
+  bg : @core.Color
+  bg_inset : @core.Color
+  surface : @core.Color
+  surface_2 : @core.Color
+  surface_3 : @core.Color
+  surface_hover : @core.Color
+  surface_active : @core.Color
+  border : @core.Color
+  border_strong : @core.Color
+  border_float : @core.Color
+  text : @core.Color
+  text_2 : @core.Color
+  text_3 : @core.Color
+  text_faint : @core.Color
+  accent : @core.Color
+  accent_hover : @core.Color
+  accent_soft : @core.Color
+  accent_border : @core.Color
+  on_accent : @core.Color
+  green : @core.Color
+  amber : @core.Color
+  red : @core.Color
+  blue : @core.Color
+  orange : @core.Color
+  window_bg : @core.Color
+  window_bg_alt : @core.Color
+  shadow : @core.Color
+}
+pub fn Palette::line_style(Self) -> @core.BorderStyle
+pub fn Palette::new(Bool) -> Self
+pub fn Palette::soft_shadow(Self) -> @core.ShadowStyle
+pub fn Palette::strong_line(Self) -> @core.BorderStyle
+pub fn Palette::window_shadow(Self) -> @core.ShadowStyle
+
+pub(all) enum PaletteAction {
+  PRoute(Route)
+  PWindow(Int32)
+  PTheme
+  PSidebar
+  PExplorer
+  PDensity
+  PSnap
+  PLatest
+  PSettings(Int32)
+  PModel(Int32)
+  PCaps(Int32)
+  PRename
+  PShortcuts
+  PResetLayout
+}
+
+pub(all) enum PaletteLine {
+  PaletteGroupLabel(String, Bool)
+  PaletteItemRow(Int32)
+}
+
+pub(all) struct PlanBox {
+  frame : RectD
+  body : RectD
+  content : RectD
+  chip : RectD
+  approve : RectD
+  keep : RectD
+  compact : RectD
+  refine : RectD
+  dismiss : RectD
+}
+
+pub(all) struct PointerMsg {
+  phase : Int32
+  x : Double
+  y : Double
+  w : Double
+  h : Double
+  wheel : Double
+}
+
+pub(all) struct Project {
+  id : Int32
+  name : String
+  branch : String
+  count : Int32
+  expanded : Bool
+  dirty : Int32
+  adds : Int32
+  dels : Int32
+  running : Bool
+  current : Bool
+}
+
+pub(all) struct ProjectCard {
+  name : String
+  path : String
+  branch : String
+  thread : String
+  dirty : Int32
+  when : String
+}
+
+pub(all) struct ProviderRow {
+  name : String
+  base : String
+  models : Array[String]
+  key_ok : Bool
+  key_hint : String
+  on : Bool
+}
+
+pub(all) struct RectD {
+  x : Double
+  y : Double
+  w : Double
+  h : Double
+}
+pub fn RectD::area(Self) -> Double
+pub fn RectD::at(Self, Double, Double) -> Self
+pub fn RectD::bottom(Self) -> Double
+pub fn RectD::contains(Self, Double, Double) -> Bool
+pub fn RectD::def(Self, Double) -> Self
+pub fn RectD::inside(Self, Self) -> Bool
+pub fn RectD::new(x~ : Double, y~ : Double, w~ : Double, h~ : Double) -> Self
+pub fn RectD::right(Self) -> Double
+pub fn RectD::sized(Self, Double, Double) -> Self
+
+pub(all) struct RoleRoute {
+  role : String
+  model : String
+  note : String
+}
+
+#derive(Eq)
+pub(all) enum Route {
+  Workbench
+  Home
+  History
+  Capabilities
+  ModelConfig
+  Settings
+  Diagnostics
+  Evaluation
+  Media
+  Statistics
+  AgentHub
+}
+pub fn Route::icon(Self) -> String
+pub fn Route::label(Self) -> String
+
+pub enum SbKind {
+  SbBrand
+  SbNewThread
+  SbSkills
+  SbSectionProjects
+  SbProject(Int32)
+  SbThread(Int32)
+  SbExpandMore
+  SbSectionExplorer
+  SbFile(Int32)
+  SbFooter
+}
+
+pub struct SbSlot {
+  kind : SbKind
+  rect : RectD
+}
+
+type ScanState
+
+pub(all) struct Shell {
+  w : Double
+  h : Double
+  titlebar : RectD
+  tabs : RectD
+  rail : RectD
+  sidebar : RectD
+  canvas : RectD
+  dock : RectD
+  body_y : Double
+}
+
+pub(all) struct ShortcutRow {
+  keys : String
+  label : String
+}
+
+pub(all) struct SkillRow {
+  name : String
+  desc : String
+  on : Bool
+  kind : Int32
+}
+
+#derive(Eq)
+pub(all) enum SnapZone {
+  NoZone
+  LeftHalf
+  RightHalf
+  FullTop
+  TopLeft
+  TopRight
+  BottomLeft
+  BottomRight
+}
+pub fn SnapZone::rect(Self) -> RectD
+
+pub struct TabCluster {
+  tier : Int32
+  robot : RectD
+  clock : RectD
+  pencil : RectD
+  tok_up : RectD
+  tok_down : RectD
+  cache_num : RectD
+  cache_word : RectD
+  ring : RectD
+  pct : RectD
+  compact : RectD
+  sliders : RectD
+  panel : RectD
+  moon : RectD
+  home : RectD
+  div_a : RectD
+  div_b : RectD
+  div_c : RectD
+}
+
+pub struct TabSlot {
+  id : Int32
+  rect : RectD
+  active : Bool
+}
+
+pub(all) struct TaskProgress {
+  done : Int32
+  total : Int32
+  files : Int32
+  adds : Int32
+  dels : Int32
+}
+
+pub(all) struct Thread {
+  id : Int32
+  title : String
+  status : ThreadStatus
+  pinned : Bool
+  project : String
+  path : String
+  when : String
+  unread : Int32
+  sub : Int32
+}
+
+#derive(Eq)
+pub(all) enum ThreadStatus {
+  Running
+  Idle
+  AwaitingReview
+  AwaitingAnswer
+  AwaitingConfirm
+}
+pub fn ThreadStatus::color(Self, Palette) -> @core.Color
+pub fn ThreadStatus::label(Self) -> String
+
+type Token
+
+pub(all) struct ToolCard {
+  title : String
+  cwd : String
+  lines : Array[String]
+  error : String
+  status : String
+}
+
+pub(all) struct UsageDay {
+  label : String
+  input : Int32
+  output : Int32
+}
+
+pub(all) struct UsageModelRow {
+  name : String
+  input : Int32
+  output : Int32
+  cost : String
+}
+
+pub struct WinChrome {
+  bar : RectD
+  icon : RectD
+  title : RectD
+  source : RectD
+  status_dot : RectD
+  tt : RectD
+  dock : RectD
+  more : RectD
+  min : RectD
+  max : RectD
+  close : RectD
+}
+
+#derive(Eq)
+pub(all) enum WindowKind {
+  Conversation
+  PlanReview
+  Browser
+  Terminal
+}
+pub fn WindowKind::label(Self) -> String
+
+pub(all) struct WindowRec {
+  id : Int32
+  kind : WindowKind
+  title : String
+  badge : String
+  thread : Int32
+  rect : RectD
+  pre_rect : RectD
+  maximized : Bool
+  minimized : Bool
+}
+
+// Type aliases
+
+// Traits
