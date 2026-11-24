@@ -9,6 +9,10 @@
       content="OMP Studio 的 MoonBit + MoUI 复刻：多浮窗工作台、会话侧栏、命令面板与 10 个二级页面，整块界面由 canvas 自绘。"
     />
     <title>OMP Studio · MoonBit/MoUI 复刻</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%2317182a'/%3E%3Ccircle cx='32' cy='32' r='13' fill='none' stroke='%239e8cfc' stroke-width='7'/%3E%3C/svg%3E"
+    />
     <style>
       * { box-sizing: border-box; }
       html, body, #canvas-host { width: 100%; height: 100%; margin: 0; }
@@ -31,7 +35,7 @@
       import { bootMouiWasmGcApp } from "../.mooncakes/wzzc-dev/moui_web_renderer/runtime.js";
       const status = document.querySelector("#boot-status");
       bootMouiWasmGcApp({
-        wasmUrl: new URL("../_build/wasm-gc/debug/build/web_wasm/web_wasm.wasm", import.meta.url),
+        wasmUrl: new URL("../_build/wasm-gc/release/build/web_wasm/web_wasm.wasm", import.meta.url),
         canvasHost: "#canvas-host",
         onStatus: text => {
           if (status) status.textContent = text;

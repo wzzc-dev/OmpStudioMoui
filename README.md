@@ -59,7 +59,7 @@ MoonBit (wasm-gc / native)
 | `docs/roadmap.md` | 分阶段功能清单与进度记录 |
 | `scripts/shot.sh` | 构建/启动后只截应用窗口，校验窗口 id 与截图像素尺寸 |
 | `scripts/check.sh` | 上述流程 + 5 秒存活检查（原生回归门禁） |
-| `scripts/build-site.sh` | 把 wasm 构建拼成可托管的静态站点 |
+| `scripts/build-site.sh` | 构建 wasm（默认 release）并拼成可托管的静态站点 |
 | `.github/workflows/pages.yml` | CI：构建 web 并部署 GitHub Pages |
 
 ## 跑起来
@@ -73,13 +73,12 @@ moon update          # 拉取 mooncakes 依赖（moui / moui_web_renderer / moui
 ### 浏览器
 
 ```sh
-moon build web_wasm --target wasm-gc
-scripts/build-site.sh --no-build
+scripts/build-site.sh                  # 默认 --release：moon build web_wasm --target wasm-gc --release + 拼站点
 python3 -m http.server 8099 -d _site
 # 打开 http://127.0.0.1:8099/
 ```
 
-WebGPU 可用时走 GPU；不可用时 `runtime.js` 自动改走 Canvas2D，所以普通 Chrome/Edge/Safari 都能跑。首次加载要下载约 2MB 的 wasm。
+WebGPU 可用时走 GPU；不可用时 `runtime.js` 自动改走 Canvas2D，所以普通 Chrome/Edge/Safari 都能跑。首次加载要下载约 0.9MB 的 wasm（release 构建；debug 构建约 2MB，用 `scripts/build-site.sh --debug` 对照调试），站点侧 gzip 后约 290KB。
 
 ### macOS 原生
 
@@ -101,7 +100,7 @@ QA 开关（都在启动时读环境变量）：`OMP_ROUTE=<slug>` 指定起始�
 
 ## 部署
 
-推送到 `main` 或手动触发 workflow 即可；CI 在 Ubuntu 上安装 MoonBit、构建 wasm-gc、`scripts/build-site.sh` 拼出 `_site/`，再由 `actions/deploy-pages` 发布。
+推送到 `main` 或手动触发 workflow 即可；CI 在 Ubuntu 上安装 MoonBit、`moon build web_wasm --target wasm-gc --release`、`scripts/build-site.sh --no-build` 拼出 `_site/`，再由 `actions/deploy-pages` 发布。
 
 仓库 Settings → Pages → Source 选 **GitHub Actions**（首次部署前需要一次）。站点是纯静态，路径全相对，放在项目子路径下也能用。
 

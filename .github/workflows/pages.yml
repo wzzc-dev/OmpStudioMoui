@@ -33,8 +33,8 @@ jobs:
       - name: Fetch mooncakes dependencies
         run: moon update
 
-      - name: Build web target
-        run: moon build web_wasm --target wasm-gc
+      - name: Build web target (release)
+        run: moon build web_wasm --target wasm-gc --release
 
       - name: Assemble static site
         run: scripts/build-site.sh --no-build
